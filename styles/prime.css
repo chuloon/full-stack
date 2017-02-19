@@ -1,0 +1,95 @@
+body {
+    background-color: #e9e9e9;
+}
+
+.validationMessage {
+    color: red;
+}
+
+.submit-button {
+    margin-top: 15px;
+}
+
+.prime-number {
+    font-size: 16px;
+}
+
+/* Floating label code source: http://nickplesha.github.io/post/floatinglabel.html */
+
+.field-container {
+  position: relative;
+  margin-top:15px;
+  font-family: 'Roboto', sans-serif;
+  width: 380px;
+}
+.field {
+  display:block;
+  width:100%;
+  padding:15px 10px 0;
+  font-size:14px;
+}
+.field:focus {
+  outline: 0;
+}
+
+:focus::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  color: transparent;
+}
+:focus::-moz-placeholder { /* Firefox 19+ */
+  color: transparent;
+}
+:focus:-ms-input-placeholder { /* IE 10+ */
+  color: transparent;
+}
+:focus:-moz-placeholder { /* Firefox 18- */
+  color: transparent;
+}
+
+.floating-label {
+  position:absolute;
+  pointer-events:none;
+  top: 5px;
+  left:10px;
+  font-size: 10px;
+  opacity:0;
+  background-color: white;
+  padding: 0 2px;
+  -webkit-transition: 0.2s ease-in-out;
+  transition: 0.2s ease-in-out;
+}
+.field:focus + span + .floating-label {
+  color: #03a9f4;
+  opacity:1;
+  top:-5px;
+}
+
+/* End floating label styles */
+
+input {
+    border: none;
+    border-bottom: 1px solid black;
+}
+
+input:focus {
+    border-bottom-color: #03a9f4;
+}
+
+input[type="search"] {
+    border: none;
+    border-bottom: 1px solid black;
+    box-shadow: none;
+    border-radius: 0px;
+}
+
+input[type="search"]:focus {
+    box-shadow: none;
+}
+
+/* Bootstrap Overrides */
+
+.panel {
+    border-radius: 0px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+}
+
+/* End Bootstrap Overrides */
