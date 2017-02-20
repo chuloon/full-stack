@@ -71,11 +71,7 @@ function primeNumberViewModel() {
         let primeList = [];
         this.primeList([]);
 
-        //ensure startingValue is always less than endingValue
-        if(startingValue === endingValue) {
-            return isPrime(startingValue) ? [startingValue] : [];
-        }
-        else if(startingValue > endingValue) {
+        if (startingValue > endingValue) {
             let temp = startingValue;
             startingValue = endingValue;
             endingValue = temp;
@@ -85,6 +81,11 @@ function primeNumberViewModel() {
             if (isPrime(i)) {
                 primeList.push(i);
             }
+        }
+
+        if (primeList.length === 0) {
+            this.primeList().push("There are no prime numbers within the specified range.");
+            primeList.push("There are no prime numbers within the specified range.");
         }
 
         console.log(primeList);
